@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:latest  #Latest image of python environment
+    steps:
+      - checkout # Checks out the source code from rehmanuet's repo default directory
+      - run: python --version  # Sample Command for Demonstration
+      - run: ls
+      - run: python test.py 
+      - run: echo "Build Successfully"
